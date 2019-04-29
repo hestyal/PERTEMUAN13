@@ -1,143 +1,50 @@
-Skip to content
-
- 
-  
-Pull requests 
-Issues 
-Marketplace 
-Explore 
-
- 
- 
- 
-
-
- Watch 
-0 
- Star 
-0 
- Fork 
-0 
-
-muhnuryusri/pertemuan_13 
- Code 
- Issues 0 
- Pull requests 0 
- Projects 0 
- Wiki 
- Insights 
-Branch: master 
-pertemuan_13/LinearLinkedList(Single).cpp 
-Find file 
-Copy path 
- muhnuryusri Create LinearLinkedList(Single).cpp 
-ff10566 4 hours ago 
-1 contributor 
-45 lines (34 sloc) 1.01 KB 
-Raw
-Blame
-History
-   
-
 #include <iostream>
-
 #include <string>
-
-
-
 using namespace std;
-
-
-
-struct Mhs{
-
-                    //membuat tipe data struct yang berfunsi menyimpan beberapa tipe data yang berbeda.
+struct Mhs{ //membuat tipe data struct yang berfunsi menyimpan beberapa tipe data yang berbeda.
 
     int nim;
-
     Mhs*next;        //Nama_struct*next.
 
 };
-
-
-
 void printList(Mhs*n)      //Membuat fungsi printList
 
 {
-
-    while (n!= NULL)       //syarat n tidak sama dengan NULL
+  while (n!= NULL)       //syarat n tidak sama dengan NULL
 
     {
 
         cout<<"NIM        : "<<n->nim<<" "<<endl;   //n-.data adalah sebuah variable yang akan di panggil
-
         n = n->next;
 
     }
 
 }
-
-
-
 int main ()        // program utama
 
 {
 
     Mhs*head = NULL;    // 
-
     Mhs*second = NULL;  // nilai variabel head, second, dan third sama dengan NULL
-
     Mhs*third = NULL;   //
 
-
-
     head = new Mhs();   // 
-
     second = new Mhs(); // 
-
     third = new Mhs();  //
 
 
 
     head->nim = 1829141023; // memanggil nilai head.nim
-
     head->next = second;  // memanggil data menuju second.nim
-
-
-
     second->nim = 1829140014;
-
     second->next = third;
-
-
-
     third->nim = 1829141033;
-
     third->next = NULL;
 
-
-
     printList(head);
-
-
-
     cin.get();
 
     return 0;
 
 }
-
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
- 
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
 
